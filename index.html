@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' />
+  <link rel="stylesheet" href="public/css/styles.css" />
+  <link rel="icon" href="favicon.ico">
+  <title>Registration form</title>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <nav class='nav'>
+      <h1>Registration</h1>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="register-form">
+      <form class="form form--signin" id='registerForm'>
+        <div class="form__group">
+          <label class="form__label" for="firstName">First Name
+            <span class='validation__error' id='errorFirstName'></span>
+          </label>
+          <input class="form__input" id="firstName" type="text" placeholder="First Name" required="required"
+            minlength="3" />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="lastName">Last Name
+            <span id='errorLastName' class='validation__error'></span>
+          </label>
+          <input class="form__input" id="lastName" type="text" placeholder="Last Name" required="required"
+            minlength="3" />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="userName">User name
+            <span id='errorUserName' class='validation__error'></span>
+          </label>
+          <input class="form__input" id="userName" type="text" placeholder="User Name" required="required"
+            minlength="5" />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email">Email address
+            <span id='errorEmail' class='validation__error'></span>
+          </label>
+          <input class="form__input" id="email" type="email" placeholder="you@example.com" required="required" />
+        </div>
+        <div class="form__group ma-bt-md">
+          <br><label class="form__label" for="password">Password
+            <span id='errorPassword' class='validation__error'></span>
+          </label>
+          <input class="form__input" id="password" type="password" placeholder="••••••••" required="required"
+            minlength="8" />
+        </div>
+        <div class="form__group ma-bt-md">
+          <br><br><label class="form__label" for="passwordConfirm"> Password Confirm
+            <span id='errorPasswordConfirm' class='validation__error'></span>
+          </label>
+          <input class="form__input" id="passwordConfirm" type="password" placeholder="••••••••" required="required"
+            minlength="8" />
+        </div>
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="dateOfBirth">Date Of Birth</label>
+          <input class="form__input" id="dateOfBirth" type="date" />
+        </div>
+        <div class="multiselect form__group">
+          <div class="selectBox" onclick="showCheckboxes()">
+            <select class="form__input">
+              <option class="form__input">Select your interests</option>
+            </select>
+            <div class="overSelect"></div>
+          </div>
+          <div id="checkboxes">
+            <label for="music" class="form__label">
+              <input type="checkbox" id="music" /> Music </label>
+            <label for="cricket" class="form__label">
+              <input type="checkbox" id="cricket" /> Cricket</label>
+            <label for="reading" class="form__label">
+              <input type="checkbox" id="reading" /> Reading</label>
+            <label for="sports" class="form__label">
+              <input type="checkbox" id="sports" /> Sports</label>
+            <label for="watchingTV" class="form__label">
+              <input type="checkbox" id="watchingTV" /> Watching TV</label>
+          </div>
+        </div>
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="about">About yourself
+            <span id='errorText' class='validation__error'></span>
+          </label>
+          <textarea id="about" name="about" rows="4" cols="50" minlength="100" required
+            placeholder="Tell about yourself(min 30 words)"></textarea>
+        </div>
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="city">City of living:
+            <span id='errorCity' class='validation__error'></span>
+          </label>
+          <select class="form__input" name="city" id="city" required>
+            <option value="">--select one--</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Surat">Surat</option>
+            <option value="Pune">Pune</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Kanpur">Kanpur</option>
+            <option value="Thane">Thane</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+            <option value="Kanyakumari">Kanyakumari</option>
+          </select>
+        </div>
+        <div class="form__group"><button class="btn btn--green" id='btnRegister'>Register</button></div>
+      </form>
+    </div>
+  </main>
+
+  <div class="footer">
+    <p class="footer__copyright">
+      &copy; Registration form
+    </p>
+  </div>
+
+</body>
+<script src="public/js/utils.js"></script>
+<script src="public/js/main.js"></script>
+
+</html>
